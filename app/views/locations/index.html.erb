@@ -1,0 +1,7 @@
+<h1>View Location and information</h1>
+<%= link_to 'Add Location', new_gym_location_path(@gym) %>
+<ul>
+  <% @locations.each do |location| %>
+    <li><%= link_to location.name, [@gym, location] %></li>
+  <% end %>
+</ul>

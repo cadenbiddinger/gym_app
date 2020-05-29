@@ -1,0 +1,10 @@
+<h1 class="ui header">All Gyms</h1>
+<% @gyms.each do |gym| %>
+  <h1><%= gym.name %></h1>
+  <%= link_to "Show", gym_path(gym) %>
+  <%= link_to "Edit", edit_gym_path(gym) %>
+  <%= link_to "Destroy", gym_path(gym), method: :delete %>
+<% end %>
+<br />
+<br />
+<%= link_to "New Gym", new_gym_path %>

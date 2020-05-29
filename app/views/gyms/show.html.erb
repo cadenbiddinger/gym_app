@@ -1,0 +1,11 @@
+<div class="ui card">
+  <div class="content">
+    <p class="header">
+      <%= @gym.name %> <%= @gym.name %>
+    </p>
+  </div>
+  <div class="extra content">
+    <%= link_to 'Edit', edit_gym_path(@gym) %> |
+    <%= link_to 'Back', gyms_path %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h1><%= @gym.name %></h1>
+<h3>Name: <%= @location.name %></h4>
+<br />
+<h2>Comments</h2>
+<% @location.comments.each do |comment| %>
+  <%= render 'comments/comment', { comment: comment } %>
+<% end %>
+<br />
+<%= link_to 'Add Comment', new_location_comment_path(@location), class: "ui button blue" %>
+
+<br />
+<br />
+<%= link_to 'Edit Location', edit_gym_location_path([@gym, @location]) %> 
+<%= link_to 'Delete Location', [@gym, @location], method: :delete %> 
+<%= link_to 'Back To Locations', gym_locations_path(@gym) %>
